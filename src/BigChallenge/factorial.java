@@ -8,12 +8,12 @@ public class factorial {
         System.out.println("Welcome to Fatorial of number");
         System.out.print("Please enter number to find factorial : ");
         int num = read.nextInt();
-        int fact = factorial(num);
+        long fact = factorial(num);
         System.out.println("THe fatorial of "+ "num is : " + fact);
     }
-    public static int factorial(int num){
+    public static long factorial(int num){
         int i =1;
-        int sum = 1;
+        long sum = 1;
         while (i <= num){
             sum = sum * i;
             i++;

@@ -14,27 +14,15 @@ public class SwitchCalc {
         double num2 = read.nextDouble();
 
         System.out.print("Enter the operator (+, -, *, /): ");
-        char operator = read.next().charAt(0);
+        String operator = read.next();
 
-        double result;
-
-        switch (operator) {
-            case '+' -> result = num1 + num2;
-            case '-' -> result = num1 - num2;
-            case '*' -> result = num1 * num2;
-            case '/' -> {
-                if (num2 == 0) {
-                    System.out.println("Cannot divide by zero.");
-                    return; // Exit early
-                } else {
-                    result = num1 / num2;
-                }
-            }
-            default -> {
-                System.out.println("Invalid operator.");
-                return;
-            }
-        }
+        double result = switch (operator) {
+            case "+" -> num1 + num2;
+            case "-" -> num1 - num2;
+            case "*" -> num1 * num2;
+            case "/" -> num1 / num2;
+            default -> Double.NaN; // Not a number if operator is invalid
+        };
 
         System.out.println("Your result is: " + result);
     }

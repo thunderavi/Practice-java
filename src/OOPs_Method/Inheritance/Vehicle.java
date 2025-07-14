@@ -7,6 +7,12 @@ public class Vehicle {
     public void setNumberOfTyres(int numberOfTyres){
         this.numberOfTyres=numberOfTyres;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle no of tiers :"+numberOfTyres;
+    }
+
     public void commute(){
         System.out.printf("I am going " +
                 "from Place A to B using %d tires \n",numberOfTyres);

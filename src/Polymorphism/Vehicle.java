@@ -1,6 +1,6 @@
 package Polymorphism;
 
-public abstract class Vehicle {
+public class Vehicle {
 
     private int noOfTires;
 

@@ -27,9 +27,9 @@ public class calculator {
 
             try {
                 int[] a = new int[5];
-           System.out.printf("Result is %d", a[6]);
-                a[6] = first / second;
-          System.out.printf("Result is %d", a[6]);
+//           System.out.printf("Result is %d", a[6]);
+//                a[6] = first / second;
+//          System.out.printf("Result is %d", a[6]);
                 int result = first / second;
                 System.out.printf("Result is %d", result);
             }catch (ArithmeticException exception){
@@ -40,6 +40,8 @@ public class calculator {
             }catch (Throwable th){  // more general and parent
                 System.out.println("General Exception");
                 throw th;
+            } finally {
+                System.out.println("I am in finally");
             }
         }
     }

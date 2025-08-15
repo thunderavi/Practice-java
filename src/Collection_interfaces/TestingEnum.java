@@ -6,7 +6,12 @@ public class TestingEnum {
     TrafficLight color = TrafficLight.RED;
     color = TrafficLight.GREEN;
 
-    Grade grade= Grade.D;
+    Grade grade= Grade.valueOf("D");
+        for (Grade value : Grade.values()) {
+            System.out.println(value);
+        }
+
+
     }
 
 }

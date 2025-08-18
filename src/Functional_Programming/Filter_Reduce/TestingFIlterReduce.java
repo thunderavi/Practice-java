@@ -19,6 +19,8 @@ public class TestingFIlterReduce {
             }
         });
         System.out.println("Single method.........");
+
+        //small form
         fruits.stream()
                 .filter(fruit -> fruit.endsWith("a"))
                 .forEach(fruit -> System.out.println(fruit));

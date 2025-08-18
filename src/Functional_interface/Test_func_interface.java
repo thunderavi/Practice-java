@@ -19,11 +19,16 @@ public class Test_func_interface {
             numbers.stream()
                     .filter(num -> num % 2 ==1)
                     .forEach(num -> System.out.println(num));
-//            //Small form
-//            int newsum2 = numbers.stream()
-//                    .reduce(0,(a, b) -> a+b);
-//            System.out.println(newsum2);
 
+
+            //Small form
+            int newsum2 = numbers.stream()
+                    .reduce(0,Integer::sum);
+            System.out.println(newsum2);
+
+            numbers.stream()
+                    .filter(num -> num % 2 ==1)
+                    .forEach(num -> System.out.println(num));
 
 
         }

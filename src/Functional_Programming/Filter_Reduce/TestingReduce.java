@@ -26,5 +26,10 @@ public class TestingReduce {
         int newsum2 = numbers.stream()
                 .reduce(0,(a, b) -> a+b);
         System.out.println(newsum2);
+
+
+        int max = numbers.stream()
+                .reduce(Integer.MAX_VALUE,(a, b) -> a > b ? a:b);
+        System.out.println(newsum2);
     }
 }
